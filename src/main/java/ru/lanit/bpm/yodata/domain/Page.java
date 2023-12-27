@@ -23,5 +23,9 @@ public class Page {
     @Column(name = "parsing_x_path")
     private String parsingXPath;
 
-    Page (String)
+    public Page(String name, String url, String parsingXPath) {
+        this.name = name;
+        this.url = url;
+        this.parsingXPath = parsingXPath;
+    }
 }

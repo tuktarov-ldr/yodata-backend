@@ -6,3 +6,18 @@ spring:
     url: jdbc:h2:./target/local_db;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
     username: sa
     password: sa
+
+#bot
+ru.lanit.bpm.yodata:
+  bot:
+    name: "yodataAppBot"
+    token: "6930503091:AAHl_oTVphdgBqoPbwSJXRtOteBhMOOAQrk"
+
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: admin
+      email: admin@admin.ru
+    job-execution:
+      enabled: true

@@ -1,5 +1,6 @@
 package ru.lanit.bpm.yodata.fw;
 
+import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -14,6 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "ru.lanit.bpm.yodata.app.repo",
         "ru.lanit.bpm.yodata.adapter.hibernate"
 })
+@EnableProcessApplication
 public class YodataBackendApplication {
 
     public static void main(String[] args) {

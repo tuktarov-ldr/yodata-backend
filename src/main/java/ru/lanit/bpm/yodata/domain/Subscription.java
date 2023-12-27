@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "subscriptions")
-public class Subscription {
+public class  Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_subscriptions_id")
     @SequenceGenerator(name = "sq_subscriptions_id", allocationSize = 1)

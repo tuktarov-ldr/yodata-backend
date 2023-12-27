@@ -1,11 +1,14 @@
 package ru.lanit.bpm.yodata.app.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.lanit.bpm.yodata.app.api.DuplicateEntityException;
 import ru.lanit.bpm.yodata.app.api.UserService;
 import ru.lanit.bpm.yodata.app.repo.UserRepository;
 import ru.lanit.bpm.yodata.domain.User;
+
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -20,5 +23,15 @@ public class UserServiceImpl implements UserService {
         } else {
         userRepository.save(new User(login, password, firstName, lastName, telegramId));
         }
+    }
+
+    @Override
+    public void updatePass(String login, String password) {
+//        userRepository.save(userRepository.findById(login))
+    }
+
+    @Override
+    public Optional<User> getUserByTelegramId(Long telegramId) {
+        return userRepository.findByTelegramId(telegramId);
     }
 }

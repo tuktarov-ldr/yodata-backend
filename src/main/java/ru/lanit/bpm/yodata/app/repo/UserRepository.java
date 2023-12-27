@@ -15,4 +15,6 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     @Query("select ss from User u join Subscription ss on u.login = ss.user where u.login = :login")
     List<Subscription> getUserSubscriptions(String login);
+
+    Optional<User> findByTelegramId(Long telegramId);
 }

@@ -26,4 +26,5 @@ public class ParsingResult {
     private Instant parsingDateTime;
     private String result;
     private Boolean sent;
+
 }
